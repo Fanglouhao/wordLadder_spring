@@ -130,7 +130,7 @@ public class Word_ladder {
     @RequestMapping(value = "/ladder", method = RequestMethod.GET)
     public String say(@RequestParam("start") String start, @RequestParam("end") String end){
         StringBuilder result = new StringBuilder("|| ");
-        HashSet<String> dict = readFileByLines("/Users/apple/IdeaProjects/wordladder/src/main/resources/EnglishWords.txt");
+        HashSet<String> dict = readFileByLines("../../../resources/EnglishWords.txt");
         List<List<String>> output = new ArrayList<List<String>>();
         int ret = wordLadder(start, end, dict, output);
         if(output.isEmpty()||ret == 0){
